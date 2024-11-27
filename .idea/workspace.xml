@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7be28191-4048-4de6-aa2a-1ae66de944a6" name="Changes" comment="first commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_essential/Format.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_essential/lv5/Format.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_essential/Kiosk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_essential/lv5/Kiosk.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_essential/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_essential/lv5/Main.java" afterDir="false" />
@@ -135,7 +136,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732512149494</updated>
-      <workItem from="1732512149862" duration="58720000" />
+      <workItem from="1732512149862" duration="59564000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
