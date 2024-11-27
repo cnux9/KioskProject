@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7be28191-4048-4de6-aa2a-1ae66de944a6" name="Changes" comment="first commit" />
+    <list default="true" id="7be28191-4048-4de6-aa2a-1ae66de944a6" name="Changes" comment="first commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv2/view/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv2/view/Printer.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,21 +25,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "cnux9"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;cnux9&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/cnux9/KioskProject.git",
-    "accountId": "031aae96-afde-447a-84ae-a261afc2b09e"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/cnux9/KioskProject.git&quot;,
+    &quot;accountId&quot;: &quot;031aae96-afde-447a-84ae-a261afc2b09e&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="2pKQAsaQe55L7xPg3QECq7L8jes" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -51,6 +55,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/cnux9/OneDrive/문서/sparta/spring/hello-spring/KioskProject/src/com/tistory/cnux9/kiosk_challenge/lv2",
     "node.js.detected.package.eslint": "true",
@@ -59,7 +64,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/cnux9/OneDrive/문서/sparta/spring/hello-spring/KioskProject/src/Main.java",
-    "settings.editor.selected.configurable": "preferences.editor",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -128,7 +133,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1732512149494</updated>
-      <workItem from="1732512149862" duration="59868000" />
+      <workItem from="1732512149862" duration="60733000" />
+      <workItem from="1732704686251" duration="614000" />
+      <workItem from="1732705332841" duration="850000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />

@@ -15,9 +15,6 @@ public class Printer {
     private boolean hasTitle = false;
     private String title;
     List<StringBuilder> sbList;
-//    private Table table;
-
-
 
     public Printer(int rowNum) {
         sbList = new ArrayList<>(rowNum);
@@ -117,7 +114,6 @@ public class Printer {
             }
         }
         return this;
-
     }
 
     public void print() {
@@ -126,7 +122,6 @@ public class Printer {
         }
         for (int i = 0;i<sbList.size();i++) {
             System.out.println(sbList.get(i).toString());
-//            sbArr[i].append(blue((i+1) + ". "));
         }
     }
 
