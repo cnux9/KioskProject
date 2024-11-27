@@ -1,7 +1,7 @@
-package com.tistory.cnux9.kiosk_essential;
+package com.tistory.cnux9.kiosk_essential.lv5;
 
-import static com.tistory.cnux9.kiosk_essential.Format.blue;
-import static com.tistory.cnux9.kiosk_essential.Format.magenta;
+import static com.tistory.cnux9.kiosk_essential.lv5.Format.blue;
+import static com.tistory.cnux9.kiosk_essential.lv5.Format.magenta;
 
 public class Printer {
 

@@ -1,10 +1,10 @@
-package com.tistory.cnux9.kiosk_essential;
+package com.tistory.cnux9.kiosk_essential.lv5;
 //import com.tistory.cnux9.kiosk.Format.*;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import static com.tistory.cnux9.kiosk_essential.Format.*;
+import static com.tistory.cnux9.kiosk_essential.lv5.Format.*;
 
 public class Kiosk {
     Scanner sc = new Scanner(System.in);

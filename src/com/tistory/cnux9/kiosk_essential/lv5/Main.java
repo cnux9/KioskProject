@@ -1,4 +1,4 @@
-package com.tistory.cnux9.kiosk_essential;
+package com.tistory.cnux9.kiosk_essential.lv5;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {

@@ -1,4 +1,4 @@
-package com.tistory.cnux9.kiosk_essential;
+package com.tistory.cnux9.kiosk_essential.lv5;
 
 public class MenuItem {
     private String name;
