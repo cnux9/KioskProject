@@ -18,10 +18,12 @@ public class Kiosk {
     Menu cart = new Menu("Cart");
     private int start;
 
+    // Menu 배열을 매개변수로 받아 인스턴스 생성
     public Kiosk(Menu... menuArr) {
         this.menuArr = menuArr;
     }
 
+    // 메인 키오스크 루프
     public void start() {
         while (openMainMenu()) {
             // 메인 메뉴가 false를 리턴할 때까지 반복
@@ -29,6 +31,7 @@ public class Kiosk {
         System.out.println(green("프로그램을 종료합니다."));
     }
 
+    // 메인 메뉴 카테고리 화면 + 장바구니가 있다면 주문/조회 기능
     private boolean openMainMenu() {
         // 메인 메뉴 출력
         Printer.printMenus(menuArr);
@@ -58,6 +61,7 @@ public class Kiosk {
         return true;
     }
 
+    // 장바구니 주문 화면
     private void openOrderScreen() {
         Printer.printCart(cart);
         new Printer("Total", 0).print();
@@ -74,6 +78,7 @@ public class Kiosk {
         }
     }
 
+    // 장바구니 항목 제거 화면
     private void openDeleteScreen() {
         Printer.printItems(cart);
         int input = nextInput(cart.size());
@@ -84,8 +89,8 @@ public class Kiosk {
         }
     }
 
+    // 할인 혜택을 선택하는 화면
     private void openDiscountScreen(double total) {
-//        printer.printFormattedData(new String[][]{});
         System.out.println(green("할인 정보를 입력해주세요."));
         String[][] data = Arrays.stream(Discount.values()).map(d -> new String[]{d.name, blue(Integer.toString(d.percentage)) + " %"}).toArray(String[][]::new);
         new Printer(4)
@@ -106,15 +111,7 @@ public class Kiosk {
         System.out.println(green("주문이 완료되었습니다!! 금액은 " + total * (100 - percentage) / 100) + green("원 입니다."));
     }
 
-//    private void printOrderMenu() {
-//        String[][] data = {
-//            {"Orders", "장바구니를 확인 후 주문합니다."},
-//            {"Cancel", "진행중인 주문을 취소합니다."}
-//        };
-//        printer.printTitle("ORDER");
-//        printer.printFormattedData(data, menuArr.length);
-//    }
-
+    // 다음 정수 입력 + 유효성 검사
     private int nextInput(int end) {
         int input = 0;
         while (true) {
@@ -134,6 +131,7 @@ public class Kiosk {
         return input - 1;
     }
 
+    // 카테고리별 하위 메뉴 선택 화면 처리
     private void openSubMenu(Menu menu) {
         Printer.printItems(menu);
 
@@ -145,6 +143,7 @@ public class Kiosk {
         }
     }
 
+    // 주문 확인 화면
     private void openOrderCheck(MenuItem item) {
         Menu menu = new Menu("SELECTED").add(item);
         Printer.printItems(menu);

@@ -5,7 +5,6 @@ import com.tistory.cnux9.kiosk_challenge.lv2.data.MenuItem;
 
 public class Main {
     public static void main(String[] args) {
-//        System.out.println("\u001B[40m  배경 빨강   \u001B[0m"); // 배경색
 
         // 데이터 구조 생성
         Menu Burgers = new Menu("Burgers")
