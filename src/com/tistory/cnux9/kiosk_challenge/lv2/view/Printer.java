@@ -11,14 +11,13 @@ public class Printer {
     private static final int MENU_PROPERTY_NUM = 1;
     private static final int ORDER_PROPERTY_NUM = 2;
     private static final int ITEM_PROPERTY_NUM = 3;
-
+    List<StringBuilder> sbList;
     private boolean hasTitle = false;
     private String title;
-    List<StringBuilder> sbList;
 
     public Printer(int rowNum) {
         sbList = new ArrayList<>(rowNum);
-        for (int i=0;i<rowNum;i++) {
+        for (int i = 0; i < rowNum; i++) {
             sbList.add(i, new StringBuilder());
         }
     }
@@ -49,7 +48,7 @@ public class Printer {
     }
 
     public static void printCart(Menu cart) {
-        String[][] col = cart.getItems().stream().map((MenuItem i) -> new String[]{"x"+i.getCount()}).toArray(String[][]::new);
+        String[][] col = cart.getItems().stream().map((MenuItem i) -> new String[]{"x" + i.getCount()}).toArray(String[][]::new);
 
         new Printer("CART", cart.size())
                 .appendItems(cart.getItems().toArray(MenuItem[]::new))
@@ -60,7 +59,7 @@ public class Printer {
 
     public static void printItems(Menu menu) {
         MenuItem[] itemArr = menu.getItems().toArray(MenuItem[]::new);
-        new Printer(menu.getName().toUpperCase() +" MENU", menu.size())
+        new Printer(menu.getName().toUpperCase() + " MENU", menu.size())
                 .appendNumber(1)
                 .appendItems(itemArr)
                 .print();
@@ -72,9 +71,9 @@ public class Printer {
 
     public Printer appendMenus(Menu... menuArr) {
         int length = menuArr.length;
-        String[][] data  = new String[length][MENU_PROPERTY_NUM];
+        String[][] data = new String[length][MENU_PROPERTY_NUM];
 
-        for (int i = 0; i<length; i++) {
+        for (int i = 0; i < length; i++) {
             data[i][0] = menuArr[i].getName();
         }
         return appendData(data);
@@ -82,9 +81,9 @@ public class Printer {
 
     public Printer appendItems(MenuItem[] items) {
         int length = items.length;
-        String[][] data  = new String[length][ITEM_PROPERTY_NUM];
+        String[][] data = new String[length][ITEM_PROPERTY_NUM];
 
-        for (int i = 0; i<length; i++) {
+        for (int i = 0; i < length; i++) {
             data[i][0] = items[i].getName();
             data[i][1] = items[i].getPrice().toString();
             data[i][2] = items[i].getDescription();
@@ -97,19 +96,19 @@ public class Printer {
     }
 
     public Printer appendData(String[][] data) {
-        for (int col = 0;col<data[0].length;col++) {
+        for (int col = 0; col < data[0].length; col++) {
             int maxLength = 0;
-            for (int row = 0;row<data.length;row++) {
+            for (int row = 0; row < data.length; row++) {
                 maxLength = Math.max(maxLength, data[row][col].length());
             }
 
-            for (int row = 0;row<data.length;row++) {
+            for (int row = 0; row < data.length; row++) {
                 String s = data[row][col];
                 sbList.get(row).append(String.format("%-" + maxLength + "s", s));
             }
 
             // 구분자
-            if (col!=data[0].length-1) {
+            if (col != data[0].length - 1) {
                 this.appendDivisior();
             }
         }
@@ -120,14 +119,14 @@ public class Printer {
         if (hasTitle) {
             printTitle();
         }
-        for (int i = 0;i<sbList.size();i++) {
+        for (int i = 0; i < sbList.size(); i++) {
             System.out.println(sbList.get(i).toString());
         }
     }
 
     public Printer appendNumber(int start) {
-        for (int i = 0; i< sbList.size(); i++) {
-            sbList.get(i).append(Format.blue((i+start) + ". "));
+        for (int i = 0; i < sbList.size(); i++) {
+            sbList.get(i).append(Format.blue((i + start) + ". "));
         }
         return this;
     }

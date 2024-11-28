@@ -4,10 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7be28191-4048-4de6-aa2a-1ae66de944a6" name="Changes" comment="first commit">
+    <list default="true" id="7be28191-4048-4de6-aa2a-1ae66de944a6" name="Changes" comment="Test: Test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv1/Format.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv1/Format.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv1/Kiosk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv1/Kiosk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv1/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv1/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv1/MenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv1/MenuItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv1/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv1/Printer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv2/Kiosk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv2/Kiosk.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv2/data/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv2/data/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv2/data/MenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv2/data/MenuItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv2/util/Format.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv2/util/Format.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv2/view/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_challenge/lv2/view/Printer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_essential/lv5/Format.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_essential/lv5/Format.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_essential/lv5/Kiosk.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_essential/lv5/Kiosk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_essential/lv5/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_essential/lv5/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_essential/lv5/MenuItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_essential/lv5/MenuItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_essential/lv5/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/tistory/cnux9/kiosk_essential/lv5/Printer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,10 +68,11 @@
     "Application.com.tistory.cnux9.kiosk_challenge.lv2.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/cnux9/OneDrive/문서/sparta/spring/hello-spring/KioskProject/src/com/tistory/cnux9/kiosk_challenge/lv2",
+    "last_opened_file_path": "C:/Users/cnux9/Downloads",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -135,7 +150,9 @@
       <updated>1732512149494</updated>
       <workItem from="1732512149862" duration="60733000" />
       <workItem from="1732704686251" duration="614000" />
-      <workItem from="1732705332841" duration="850000" />
+      <workItem from="1732705332841" duration="6071000" />
+      <workItem from="1732752542695" duration="748000" />
+      <workItem from="1732753322544" duration="1403000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -153,6 +170,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="Test: Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test: Test" />
   </component>
 </project>

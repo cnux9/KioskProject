@@ -4,14 +4,15 @@ package com.tistory.cnux9.kiosk_essential.lv5;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import static com.tistory.cnux9.kiosk_essential.lv5.Format.*;
+import static com.tistory.cnux9.kiosk_essential.lv5.Format.blue;
+import static com.tistory.cnux9.kiosk_essential.lv5.Format.magenta;
 
 public class Kiosk {
     Scanner sc = new Scanner(System.in);
     Menu[] menuArr;
     ArrayList<MenuItem> cart = new ArrayList<>();
-    private int start;
     Printer printer;
+    private int start;
 
     public Kiosk(Menu... menuArr) {
         this.menuArr = menuArr;
@@ -38,11 +39,11 @@ public class Kiosk {
         System.out.println(blue("0. ") + "exit      " + magenta("|") + " exit");
 
         int input = nextInput(menuArr.length + 2);
-        if (input==-1) {
+        if (input == -1) {
             return false;
-        } else if (input==menuArr.length) {
+        } else if (input == menuArr.length) {
             System.out.println("주문하기");
-        } else if (input==menuArr.length+1) {
+        } else if (input == menuArr.length + 1) {
             System.out.println("취소하기");
         } else {
             openSubMenu(menuArr[input]);
@@ -52,8 +53,8 @@ public class Kiosk {
 
     private void printOrderMenu() {
         String[][] data = {
-            {"Orders", "장바구니를 확인 후 주문합니다."},
-            {"Cancel", "진행중인 주문을 취소합니다."}
+                {"Orders", "장바구니를 확인 후 주문합니다."},
+                {"Cancel", "진행중인 주문을 취소합니다."}
         };
         printer.printFormattedData("ORDER", data, menuArr.length);
     }
@@ -64,7 +65,7 @@ public class Kiosk {
             try {
                 input = sc.nextInt();
 
-                if(0 <= input && input <= end) {
+                if (0 <= input && input <= end) {
                     break;
                 } else {
                     System.out.println("\u001B[2A 0-" + end + " 사이의 수를 입력해주세요.");
@@ -75,15 +76,15 @@ public class Kiosk {
                 sc.nextLine();
             }
         }
-        return input-1;
+        return input - 1;
     }
 
     private void openSubMenu(Menu menu) {
         MenuItem[] itemArr = menu.getItems().toArray(MenuItem[]::new);
-        printer.printItems(menu.getName().toUpperCase() +" MENU", itemArr);
+        printer.printItems(menu.getName().toUpperCase() + " MENU", itemArr);
 
         int input = nextInput(itemArr.length);
-        if (input>=0) {
+        if (input >= 0) {
             cart.add(menu.getItems().get(input));
         }
     }

@@ -1,9 +1,8 @@
 package com.tistory.cnux9.kiosk_challenge.lv2;
 
+import com.tistory.cnux9.kiosk_challenge.lv2.data.Discount;
 import com.tistory.cnux9.kiosk_challenge.lv2.data.Menu;
 import com.tistory.cnux9.kiosk_challenge.lv2.data.MenuItem;
-import com.tistory.cnux9.kiosk_challenge.lv2.data.Discount;
-import com.tistory.cnux9.kiosk_challenge.lv2.util.Format;
 import com.tistory.cnux9.kiosk_challenge.lv2.view.Printer;
 
 import java.util.ArrayList;
@@ -25,13 +24,9 @@ public class Kiosk {
 
     public void start() {
         while (openMainMenu()) {
-//            pass;
+            // 메인 메뉴가 false를 리턴할 때까지 반복
         }
         System.out.println(green("프로그램을 종료합니다."));
-
-//        for (Menu menu : menuArr) {
-//            printItems(menu.getName().toUpperCase() +" MENU", menu);
-//        }
     }
 
     private boolean openMainMenu() {
@@ -40,7 +35,7 @@ public class Kiosk {
 
         if (!cart.isEmpty()) {
             // 오더 출력
-            Printer.printOrders(menuArr.length+1);
+            Printer.printOrders(menuArr.length + 1);
             // 카트 출력
             Printer.printCart(cart);
         }
@@ -48,15 +43,16 @@ public class Kiosk {
 
         // 입력 처리
         int input = nextInput(menuArr.length + (!cart.isEmpty() ? 2 : 0));
-        if (input==-1) {
+        if (input == -1) {
             return false;
-        } else if (input==menuArr.length) {
+        } else if (input == menuArr.length) {
             // 주문하기
             openOrderScreen();
-        } else if (input==menuArr.length+1) {
+        } else if (input == menuArr.length + 1) {
             // 취소하기
             cart = new Menu("Cart");
         } else {
+            // 카테고리의 메뉴들을 보여주는 화면
             openSubMenu(menuArr[input]);
         }
         return true;
@@ -64,16 +60,16 @@ public class Kiosk {
 
     private void openOrderScreen() {
         Printer.printCart(cart);
-        new Printer("Total",0).print();
+        new Printer("Total", 0).print();
 
-        double total = cart.getItems().stream().mapToDouble(i -> i.getPrice()*i.getCount()).sum();
+        double total = cart.getItems().stream().mapToDouble(i -> i.getPrice() * i.getCount()).sum();
         System.out.println("￦ " + total);
         System.out.println(blue("1. ") + "구매 " + blue("2. ") + "제거 " + blue("0. ") + "취소");
 
         int input = nextInput(2);  // 0 or -1
-        if (input==0) {
+        if (input == 0) {
             openDiscountScreen(total);
-        } else if (input==1) {
+        } else if (input == 1) {
             openDeleteScreen();
         }
     }
@@ -81,7 +77,7 @@ public class Kiosk {
     private void openDeleteScreen() {
         Printer.printItems(cart);
         int input = nextInput(cart.size());
-        if (input>=0) {
+        if (input >= 0) {
             ArrayList<MenuItem> items = cart.getItems();
             // 도전 lv2 요구사항: 장바구니에서 항목을 제거할 때 스트림을 활용
             cart.setItems(items.stream().filter(item -> !item.equals(items.get(input))).collect(Collectors.toCollection(ArrayList::new)));
@@ -107,7 +103,7 @@ public class Kiosk {
             }
         };
         cart = new Menu("Cart");
-        System.out.println(green("주문이 완료되었습니다!! 금액은 " + total*(100-percentage)/100) + green("원 입니다."));
+        System.out.println(green("주문이 완료되었습니다!! 금액은 " + total * (100 - percentage) / 100) + green("원 입니다."));
     }
 
 //    private void printOrderMenu() {
@@ -126,7 +122,7 @@ public class Kiosk {
             try {
                 input = sc.nextInt();
 
-                if(0 <= input && input <= end) {
+                if (0 <= input && input <= end) {
                     break;
                 }
             } catch (Exception e) {
@@ -135,7 +131,7 @@ public class Kiosk {
                 sc.nextLine();
             }
         }
-        return input-1;
+        return input - 1;
     }
 
     private void openSubMenu(Menu menu) {
@@ -143,7 +139,7 @@ public class Kiosk {
 
         int input = nextInput(menu.size());
         // input 값이 -1이면 반환
-        if (input>=0) {
+        if (input >= 0) {
             // input 값에 해당하는 메뉴 선택 확인
             openOrderCheck(menu.getItems().get(input));
         }
@@ -154,7 +150,7 @@ public class Kiosk {
         Printer.printItems(menu);
         System.out.println(blue("1. ") + "장바구니에 넣기 " + blue("2. ") + "취소");
         int input = nextInput(1); // 0 or -1
-        if (input==0) {
+        if (input == 0) {
             if (cart.contains(item)) {
                 item.incrementCount();
             } else {

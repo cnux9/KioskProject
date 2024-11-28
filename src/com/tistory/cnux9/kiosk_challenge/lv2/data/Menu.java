@@ -3,8 +3,9 @@ package com.tistory.cnux9.kiosk_challenge.lv2.data;
 import java.util.ArrayList;
 
 public class Menu {
-    private String name;
+    private final String name;
     private ArrayList<MenuItem> items = new ArrayList<>();
+
     public Menu(String name) {
         this.name = name;
     }

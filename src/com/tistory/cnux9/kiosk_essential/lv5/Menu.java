@@ -3,8 +3,9 @@ package com.tistory.cnux9.kiosk_essential.lv5;
 import java.util.ArrayList;
 
 public class Menu {
-    private String name;
     private final ArrayList<MenuItem> items = new ArrayList<>();
+    private final String name;
+
     public Menu(String name) {
         this.name = name;
     }
